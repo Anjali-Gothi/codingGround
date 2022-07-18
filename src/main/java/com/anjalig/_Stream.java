@@ -20,10 +20,11 @@ public class _Stream {
                 new Person("Papa", MALE)
         );
         people.stream()
-                .dropWhile(p->p.name.startsWith("A"))
+                .dropWhile(p -> p.name.startsWith("A"))
                 .forEach(System.out::println);
     }
-    static  class  Person{
+
+    static class Person {
         private final String name;
         private final _Stream.Gender gender;
 
@@ -40,7 +41,8 @@ public class _Stream {
                     '}';
         }
     }
-    enum Gender{
-        FEMALE,MALE,OTHER
+
+    enum Gender {
+        FEMALE, MALE, OTHER
     }
 }

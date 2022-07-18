@@ -16,16 +16,17 @@ public class MainApp {
                 new Person("Papa", MALE)
         );
 //        Imperative style
-        List<Person> females=new ArrayList<>();
-        for(Person p:people){
-            if(FEMALE.equals(p.gender))
+        List<Person> females = new ArrayList<>();
+        for (Person p : people) {
+            if (FEMALE.equals(p.gender))
                 females.add(p);
         }
-        for(Person p:females){
+        for (Person p : females) {
             System.out.println(p);
         }
     }
-    static  class  Person{
+
+    static class Person {
         private final String name;
         private final Gender gender;
 
@@ -42,7 +43,8 @@ public class MainApp {
                     '}';
         }
     }
-    enum Gender{
-        FEMALE,MALE,OTHER
+
+    enum Gender {
+        FEMALE, MALE, OTHER
     }
 }

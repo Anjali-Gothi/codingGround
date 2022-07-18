@@ -8,14 +8,17 @@ public class _Consumer {
         Customer anjali = new Customer("Anjali", "12345678");
         Customer anjali1 = new Customer("Anjali", "12345678");
         consumerFunc.accept(anjali);
-        consumerFunc2.accept(anjali,anjali1);
+        consumerFunc2.accept(anjali, anjali1);
     }
+
     static Consumer<Customer> consumerFunc = customer -> System.out.println("Hello "
             + customer.name + " number " + customer.number);
-    static BiConsumer<Customer,Customer> consumerFunc2 = (customer1,customer2) -> System.out.println("Hello "
-            + customer1.name + " number " + customer1.number+"\nHello again "+customer2.name+" with  number" +customer2.number);
+    static BiConsumer<Customer, Customer> consumerFunc2 = (customer1, customer2) -> System.out.println("Hello "
+            + customer1.name + " number " + customer1.number + "\nHello again " + customer2.name + " with  number" + customer2.number);
 
-    static class Customer{
+
+
+    static class Customer {
         private String name;
         private String number;
 
